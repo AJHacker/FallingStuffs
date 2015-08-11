@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+   IBOutlet UIButton *play;
+    IBOutlet NSTimer *start;
+    IBOutlet UILabel *startlabel;
 
+    NSInteger *timeleft;
+
+}
+-(IBAction) playpress:(id) sender;
 @end

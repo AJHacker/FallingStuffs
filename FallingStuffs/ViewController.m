@@ -14,11 +14,27 @@
 
 @implementation ViewController
 
+-(IBAction)playpress:(id)sender{
+    [play setHidden:(true)];
+    start = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(begingame:) userInfo:nil repeats:YES];
+ 
+
+    
+}
+-(IBAction)begingame:(id)sender{
+    timeleft = timeleft-1;
+  
+
+
+   
+    
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+	[play setHidden:(FALSE)];}
 
 - (void)viewDidUnload
 {
@@ -26,9 +42,6 @@
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+
 
 @end
